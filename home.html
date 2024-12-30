@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="carousel">
+    <!-- Radio Buttons for images (used for switching) -->
+    <input type="radio" name="carousel" id="img1" checked>
+    <input type="radio" name="carousel" id="img2">
+
+    <div class="carousel-images">
+        <img src="{{ url_for('static', filename='images/img1.jpg') }}" alt="Image 1" class="carousel-image">
+        <img src="{{ url_for('static', filename='images/image2.jpg') }}" alt="Image 2" class="carousel-image">
+
+    </div>
+
+    <!-- Previous Button -->
+    <label for="img1" class="carousel-button prev">&#10094;</label>
+
+    <!-- Next Button -->
+    <label for="img2" class="carousel-button next">&#10095;</label>
+</div>
+
+<div class="chat-button-container">
+    <a href="/chat" class="chat-button">Chat with G-One</a>
+</div>
+{% endblock %}
