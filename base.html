@@ -1,0 +1,33 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title if title else 'S.A. Engineering College' }}</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='stylee.css') }}">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>S.A. Engineering</h1>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/programs">Programs</a></li>
+                    <li><a href="/admission">Admission</a></li>
+                    <li><a href="/contact">Contact</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        {% block content %}{% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 S.A. Engineering College. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
